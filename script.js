@@ -6,7 +6,7 @@ const currentStatus = {
 // General competition data
 // This data will not be updated anywhere
 const competitionData = {
-    numberOfWeeks: 8,
+    numberOfWeeks: 10,
     episodes: ["Queens of the Brit Gala", "Rumble in the Jumble", "Battle of the Brats", "Sweety Darlings!", "Talent Ahoy!", "Peter Pansy: The Rusical", "Snatch Me Out!", "The Hun Makeover", "Comedy is a Bitch", "Finale"],
     episodeType: ["Runway", "Design", "Girl Groups", "Acting", "Talent Show", "Rusical", "Snatch Game", "Makeover", "Roast", "Finale"],
     lipSyncs: ["Shake It Off by Taylor Swift", "Le Freak (Freak Out) by Chic", "Tell It To My Heart by Taylor Dayne", "Got To Be Real by Cheryl Lynn", "Shut Up & Drive by Rihanna", "Cherry Bomb by Joan Jett and the Blackhearts", "Step It Up by RuPaul feat. Dave Audé", "If I Were Your Woman by Gladys Knight & The Pips"],
@@ -89,7 +89,7 @@ const queens = (function () {
     };
 
     const queen9 = {
-        queen: "Sillexa Diction",
+        queen: "Silllexa Diction",
         initialPlacement: ["Safe", "Safe", "Safe", "Bottom", "Win", "Low", "Low", "High", "High", "Runner-up"],
         initialReturn: Array(competitionData.numberOfWeeks).fill(false),
     };
@@ -114,7 +114,7 @@ const queens = (function () {
     queens.forEach((queen) => {
         queen.placement=queen.initialPlacement.slice();
         queen.return=queen.initialReturn.slice();
-        queen.img=`images/${queen.queen.replaceAll(" ", "").replaceAll("'","")}.jpg`
+        queen.img=`images/${queen.queen.replaceAll(" ", "").replaceAll("'","")}.jpg`;
     })
 
     // Number of queens in competition
@@ -137,21 +137,21 @@ const images = {
 const storage = (function() {
     // Save data
     const saveData = function() {
-        localStorage.setItem("queensData", JSON.stringify(queens.queens));  
-        localStorage.setItem("currentStatus.week", JSON.stringify(currentStatus.week));  
+        localStorage.setItem("UK7queensData", JSON.stringify(queens.queens));  
+        localStorage.setItem("UK7currentStatus.week", JSON.stringify(currentStatus.week));  
         console.log(`storage.saveData: queens.queens array and currentStatus.week saved to local storage`);
     }
 
     const savePoints = function () {
-        localStorage.setItem("points", JSON.stringify(points.points));
+        localStorage.setItem("UK7points", JSON.stringify(points.points));
         console.log(`storage.savePoints: points saved to local storage`);
     }
 
     // Read in queen data
     const getData = function() {
-        let storedQueens = JSON.parse(localStorage.getItem("queensData"));   
-        let storedWeek = JSON.parse(localStorage.getItem("currentStatus.week"));
-        let storedPoints = JSON.parse(localStorage.getItem("points"));
+        let storedQueens = JSON.parse(localStorage.getItem("UK7queensData"));   
+        let storedWeek = JSON.parse(localStorage.getItem("UK7currentStatus.week"));
+        let storedPoints = JSON.parse(localStorage.getItem("UK7points"));
         
         if (storedQueens) {
             console.log(`storage.getData: queens.queens array retrieved from local storage`);
@@ -244,7 +244,7 @@ const universalDisplay = (function() {
 
         // Create main heading
         const heading = document.createElement("h1");
-        heading.textContent = "All Stars 2 Simulator";
+        heading.textContent = "DRUK Season 7 Simulator";
         leftDiv.appendChild(heading);
     };
 
