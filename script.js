@@ -7,26 +7,19 @@ const currentStatus = {
 // This data will not be updated anywhere
 const competitionData = {
     numberOfWeeks: 8,
-    episodes: ["All Star Talent Show Extravaganza", "All Stars Snatch Game", "HERstory of the World", "Drag Movie Shequels", "Revenge Of The Queens", "Drag Fish Tank", "Family That Drags Together", "All Stars Supergroup"],
-    episodeType: ["Talent Show", "Snatch Game", "Rusical", "Acting", "Stand-up", "Advert", "Makeover", "Finale"],
+    episodes: ["Queens of the Brit Gala", "Rumble in the Jumble", "Battle of the Brats", "Sweety Darlings!", "Talent Ahoy!", "Peter Pansy: The Rusical", "Snatch Me Out!", "The Hun Makeover", "Comedy is a Bitch", "Finale"],
+    episodeType: ["Runway", "Design", "Girl Groups", "Acting", "Talent Show", "Rusical", "Snatch Game", "Makeover", "Roast", "Finale"],
     lipSyncs: ["Shake It Off by Taylor Swift", "Le Freak (Freak Out) by Chic", "Tell It To My Heart by Taylor Dayne", "Got To Be Real by Cheryl Lynn", "Shut Up & Drive by Rihanna", "Cherry Bomb by Joan Jett and the Blackhearts", "Step It Up by RuPaul feat. Dave Audé", "If I Were Your Woman by Gladys Knight & The Pips"],
-    synopses: ["10 queens return to compete for $100,000 and a place in the Drag Race Hall of Fame. The first test is to compete in a drag talent show. With guest judge Raven-Symoné.",
-               "The queens impersonate celebrities in a quick-witted TV game show and burn rubber in a latex runway. With guest judge Ross Mathews.",
-               "The queens are challenged to perform in a lip-syncing dance number inspired by the legendary historical women. Fashion designer Jeremy Scott guest judges.",
-               "The queens' acting chops are tested in parody movie sequels of RuPaul's favorite movies. Pussycat Doll Nichole Scherzinger guest judges.",
-               "The queens must perform a live stand-up comedy act in front of an audience of judgmental drag queens. The eliminated queens choose their partners in reverse elimination order. Ross Mathews returns to guest judge.",
-               "The queens design and market drag-influenced products. Entrepreneur Marcus Lemonis (CNBC’s The Profit) co-stars, and comedian Graham Norton guest judges.",
-               "The queens must makeover family members and vogue the house down. Aubrey Plaza (Parks and Recreation) guest judges.",
-               "The winner of RuPaul’s Drag Race All Stars is crowned. But first, the queens must write original rap lyrics and perform as the ultimate girl group."] ,
-    runways: [null, "Latex Eleganza", "The Future of Drag", "Two Looks in One", null, "Pants on the Runway", "Makeover Challenge", "Final Eleganza"],
+    synopses: ["", "", "", "", "", "", "", "", "", ""] ,
+    runways: ["Queen of your Hometown", "Rumble in the Jumble", "Cuddly Wuddly", "Ab Fab: A Night of a Thousand Sweetie Darlings", "Having it Large", "Battle Axe - Warrior Queen", "Holiday Ho Ho Hos", "Drag Family Resemblance", "English Country Garden Realness", "Final Eleganza"],
     competitiveEpisode: [true, true, true, true, true, true, true, false],
-    placements: ["Win", "Top 2", "High", "Safe", "Low", "Bottom", "Eliminated", "Out", "Quit"],
+    placements: ["Win", "High", "Safe", "Low", "Bottom", "Eliminated", "Out", "Quit"],
     finalePlacements: ["Winner", "Runner Up", "Eliminated", "Out"],
 };
 
 // Number of points for each placement
 const points = (function () {
-    const points =  [{id: "win",  placement: "Win", value: 6},
+    const points =  [{id: "win",  placement: "Win", value: 5},
                      {id: "top2", placement: "Top 2", value: 5},
                      {id: "high", placement: "High", value: 4},
                      {id: "safe", placement: "Safe", value: 3},
@@ -42,73 +35,86 @@ const points = (function () {
 // Information for each of the queens
 const queens = (function () {
     const queen0 = {
-        queen: "Adore Delano",
-        initialPlacement: ["Bottom", "Quit", "Out", "Out", "Out", "Out", "Out", "Out"],
+        queen: "Bones",
+        initialPlacement: ["Safe", "High", "Win", "Safe", "Bottom", "High", "Bottom", "Win", "Win", "Runner-up"],
         initialReturn: Array(competitionData.numberOfWeeks).fill(false),
     };
 
     const queen1 = {
-        queen: "Alaska",
-        initialPlacement: ["High", "Win", "Safe", "Win", "Top 2", "Win", "Bottom", "Winner"],
-        initialReturn: Array(competitionData.numberOfWeeks).fill(false)
+        queen: "Bonnie Ann Clyde",
+        initialPlacement: ["Safe", "Low", "Safe", "Win", "Safe", "Safe", "Win", "Eliminated", "Out", "Out"],
+        initialReturn: Array(competitionData.numberOfWeeks).fill(false),
     };
 
     const queen2 = {
-        queen: "Alyssa Edwards",
-        initialPlacement: ["Safe", "Safe", "Win", "Eliminated", "Win", "High", "Eliminated", "Out"],
-        initialReturn: [false, false, false, false, true, false, false, false]
+        queen: "Catrin Feelings",
+        initialPlacement: ["High", "High", "Safe", "High", "Safe", "Safe", "High", "Bottom", "Bottom", "Runner-up"],
+        initialReturn: Array(competitionData.numberOfWeeks).fill(false),
     };
 
     const queen3 = {
-        queen: "Coco Montrese",
-        initialPlacement: ["Eliminated", "Out", "Out", "Out", "Out", "Out", "Out", "Out"],
+        queen: "Chai T Grande",
+        initialPlacement: ["Safe", "Safe", "Low", "Low", "Eliminated", "Out", "Out", "Out", "Out", "Out"],
         initialReturn: Array(competitionData.numberOfWeeks).fill(false),
-    };
-    
-    const queen4 = {
-        queen: "Detox",
-        initialPlacement: ["Safe", "Bottom", "Top 2", "Safe", "Top 2", "Safe", "Win", "Runner Up"],
-        initialReturn: Array(competitionData.numberOfWeeks).fill(false),
-    };
-    
-    const queen5 = {
-        queen: "Ginger Minj",
-        initialPlacement: ["High", "Safe", "Eliminated", "Out", "Out", "Out", "Out", "Out"],
-        initialReturn: Array(competitionData.numberOfWeeks).fill(false),
-    };
-    
-    const queen6 = {
-        queen: "Katya",
-        initialPlacement: ["Safe", "Top 2", "Bottom", "Bottom", "Safe", "Top 2", "Top 2", "Runner Up"],
-        initialReturn: Array(competitionData.numberOfWeeks).fill(false),
-    };
-    
-    const queen7 = {
-        queen: "Phi Phi O'Hara",
-        initialPlacement: ["Bottom", "High", "Safe", "Top 2", "Eliminated", "Out", "Out", "Out"],
-        initialReturn: Array(competitionData.numberOfWeeks).fill(false),
-    };
-    
-    const queen8 = { 
-        queen: "Roxxxy Andrews",
-        initialPlacement: ["Win", "Bottom", "Safe", "Bottom", "Bottom", "Bottom", "Bottom", "Eliminated"],
-        initialReturn: Array(competitionData.numberOfWeeks).fill(false),
-    };
-    
-    const queen9 = {
-        queen: "Tatianna",
-        initialPlacement: ["Top 2", "Eliminated", "Out", "Out", "Win", "Eliminated", "Out", "Out"],
-        initialReturn: [false, false, false, false, true, false, false, false],
     };
 
+    const queen4 = {
+        queen: "Elle Vosque",
+        initialPlacement: ["Win", "Safe", "High", "Safe", "High", "Win", "High", "Safe", "High", "Runner-up"],
+        initialReturn: Array(competitionData.numberOfWeeks).fill(false),
+    };
+
+    const queen5 = {
+        queen: "Nyongbella",
+        initialPlacement: ["Bottom", "Low", "Bottom", "Eliminated", "Out", "Out", "Out", "Out", "Out", "Out"],
+        initialReturn: Array(competitionData.numberOfWeeks).fill(false),
+    };
+
+    const queen6 = {
+        queen: "Paige Three",
+        initialPlacement: ["High", "Safe", "High", "Safe", "Low", "Win", "Eliminated", "Out", "Out", "Out"],
+        initialReturn: Array(competitionData.numberOfWeeks).fill(false),
+    };
+
+    const queen7 = {
+        queen: "Pasty",
+        initialPlacement: ["Bottom", "Eliminated", "Out", "Out", "Out", "Out", "Out", "Out", "Out", "Out"],
+        initialReturn: Array(competitionData.numberOfWeeks).fill(false),
+    };
+
+    const queen8 = {
+        queen: "Sally TM",
+        initialPlacement: ["Safe", "Win", "Safe", "High", "Safe", "Eliminated", "Out", "Out", "Out", "Out"],
+        initialReturn: Array(competitionData.numberOfWeeks).fill(false),
+    };
+
+    const queen9 = {
+        queen: "Sillexa Diction",
+        initialPlacement: ["Safe", "Safe", "Safe", "Bottom", "Win", "Low", "Low", "High", "High", "Runner-up"],
+        initialReturn: Array(competitionData.numberOfWeeks).fill(false),
+    };
+
+    const queen10 = {
+        queen: "Tayris Mongardi",
+        initialPlacement: ["Low", "Safe", "Safe", "Safe", "High", "Bottom", "Safe", "Low", "Eliminated", "Out"],
+        initialReturn: Array(competitionData.numberOfWeeks).fill(false),
+    };
+
+    const queen11 = {
+        queen: "Viola",
+        initialPlacement: ["Safe", "Bottom", "Eliminated", "Out", "Out", "Out", "Out", "Out", "Out", "Out"],
+        initialReturn: Array(competitionData.numberOfWeeks).fill(false),
+    };
+
+
     // Set together in one array
-    const queens = [queen0, queen1, queen2, queen3, queen4, queen5, queen6, queen7, queen8, queen9];
+    const queens = [queen0, queen1, queen2, queen3, queen4, queen5, queen6, queen7, queen8, queen9, queen10, queen11];
 
     // Set placement and return equal to initial values, will be updated by user
     queens.forEach((queen) => {
         queen.placement=queen.initialPlacement.slice();
         queen.return=queen.initialReturn.slice();
-        queen.img=`images/${queen.queen.replaceAll(" ", "").replaceAll("'","")}AS2.webp`
+        queen.img=`images/${queen.queen.replaceAll(" ", "").replaceAll("'","")}.jpg`
     })
 
     // Number of queens in competition
