@@ -41,8 +41,3 @@ To play with the app and edit queen progress, open the [live demo](https://paddy
 
 - Inspired by discussions in the Drag Race fan community
 - Styling elements for the results table and queen images taken from the [Rupaul's Drag Race Wiki](https://rupaulsdragrace.fandom.com/wiki/RuPaul%27s_Drag_Race_UK_(Season_7))
-
-## Editor's Note
-
-This is a continuation of a project that I did during the COVID lockdown of 2020 while Season 12 of Rupaul's Drag Race was airing in order to see how the season could have played out without a certain disqualified queen's involvement in that season. The previous version was created in R shiny which is not a very flexible language so I was never fully satisfied with the display or functionality of that version and I have wondered about creating a new version for a long time. If you would like to have a look at the Season 12 version you can do so [here](https://paddybacall.shinyapps.io/French_Vanilla_Generator/)
-
