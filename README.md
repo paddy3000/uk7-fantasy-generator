@@ -1,7 +1,7 @@
-# uk7-generator
+# uk7-fantasy-generator
 ## Rupaul's Drag Race UK Season 7 Fantasy Results Generator
 
-[Live Demo](https://paddy3000.github.io/uk7-generator/)
+[Live Demo](https://paddy3000.github.io/uk7-fantasy-generator/)
 
 The intention of this project was to create a JavaScript and HTML app where results of Rupaul's Drag Race UK Season 7 could be edited by the user by going through the competition episodes and reassigning challenge placements based on the user's preference. A lot of well-loved contestants were eliminated around the mid-point of the competition and many have commented that there are people they would have liked to see go further, this app gives you a chance to see how that might play out.
 
@@ -10,7 +10,7 @@ And another (more primitive) one for Season 12, which I created in 2020 using di
 
 ## How to Use
 
-To play with the app and edit queen progress, open the [live demo](https://paddy3000.github.io/uk7-generator/)
+To play with the app and edit queen progress, open the [live demo](https://paddy3000.github.io/uk7-fantasy-generator/)
 
 - Click through episodes and adjust placements using the dropdown menus
 - Press "See Results" to generate results table and graph which are updated as you make changes
