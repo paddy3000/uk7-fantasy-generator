@@ -1,18 +1,19 @@
-# as2-generator
-## Rupaul's Drag Race All Stars 2 Fantasy Results Generator
+# uk7-generator
+## Rupaul's Drag Race UK Season 7 Fantasy Results Generator
 
-[Live Demo](https://paddy3000.github.io/as2-generator/)
+[Live Demo](https://paddy3000.github.io/uk7-generator/)
 
-The intention of this project was to create a JavaScript and HTML app where results of Rupaul's Drag Race All Stars 2 could be edited by the user by going through the competition episodes and reassigning challenge placements based on the user's preference. All Stars 2, while generally considered one of the best series of Rupaul's Drag Race, has decisions that some people do not agree with. In some ways these decisions make the season even more iconic, but it is also fun to consider alternate outcomes.
+The intention of this project was to create a JavaScript and HTML app where results of Rupaul's Drag Race UK Season 7 could be edited by the user by going through the competition episodes and reassigning challenge placements based on the user's preference. A lot of well-loved contestants were eliminated around the mid-point of the competition and many have commented that there are people they would have liked to see go further, this app gives you a chance to see how that might play out.
 
-I have recently been working through [The Odin Project](https://www.theodinproject.com) to gain foundational knowledge in JavaScript, HTML, and CSS and this is my first big project that I have worked on to test my progress outside of the tasks given in the course.
+I have created a similar generator for All Stars 2 which you can find [here](https://paddy3000.github.io/as2-generator/)
+And another (more primitive) one for Season 12, which I created in 2020 using different software, you can find that [here](https://paddybacall.shinyapps.io/French_Vanilla_Generator/)
 
 ## How to Use
 
-To play with the app and edit queen progress, open the [live demo](https://paddy3000.github.io/as2-generator/)
+To play with the app and edit queen progress, open the [live demo](https://paddy3000.github.io/uk7-generator/)
 
 - Click through episodes and adjust placements using the dropdown menus
-- Press "See Results" to generate results table and graph which are updated in real time
+- Press "See Results" to generate results table and graph which are updated as you make changes
 - Use the Settings button to adjust the number of points awarded per placement
 - If you have any feedback please fill out the feedback form by pressing the button with the speech bubble, I would love to hear it!
 
@@ -39,8 +40,7 @@ To play with the app and edit queen progress, open the [live demo](https://paddy
 ## Acknowledgments
 
 - Inspired by discussions in the Drag Race fan community
-- Styling elements for the results table and queen images taken from the [Rupaul's Drag Race Wiki](https://rupaulsdragrace.fandom.com/wiki/RuPaul%27s_Drag_Race_All_Stars_%28Season_2%29)
-- Built using knowledge gained through [The Odin Project](https://www.theodinproject.com)
+- Styling elements for the results table and queen images taken from the [Rupaul's Drag Race Wiki](https://rupaulsdragrace.fandom.com/wiki/RuPaul%27s_Drag_Race_UK_(Season_7))
 
 ## Editor's Note
 
