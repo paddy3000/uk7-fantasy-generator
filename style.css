@@ -24,11 +24,11 @@
 
     --white-colour: #F7F4EB;
 
-    --light-accent: rgba(234,195,217,255);
-    --lighter-accent: rgb(224, 212, 219);
-    --lightest-accent: #faf2f7;
-    --dark-accent: rgba(50,17,35,255);
-    --button-hover-colour: #FFE6E6;
+    --light-accent: rgb(218, 202, 255);
+    --lighter-accent: rgb(176, 214, 240);
+    --lightest-accent: #ccdce6;
+    --dark-accent: rgb(24, 10, 61);
+    --button-hover-colour: rgb(223, 217, 235);
 
     --header-font: Rubik;
 
@@ -337,7 +337,7 @@ fieldset > legend {
     gap: min(2rem, 10rem);
     padding: 2rem 0;
     justify-content: center;
-    width: min(100vw, calc(var(--queen-image-width)*7)); /* This ensures a max of 5 queens on each row when padding taken into account */
+    width: min(100vw, calc(var(--queen-image-width)*8)); /* This ensures a max of 5 queens on each row when padding taken into account */
     justify-self: center;
     /* width: 100w; */
 }
@@ -391,6 +391,10 @@ fieldset > legend {
 .queen-image-box.quit {
     border: var(--quit-color) solid var(--queen-border-size);
     padding: 0;
+}
+
+.queen-div.out {
+  display: none;
 }
 
 .queen-image.out,

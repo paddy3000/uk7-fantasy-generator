@@ -196,6 +196,7 @@ const display = (function () {
             const queenDropdown = document.getElementById(`queen-dropdown${i}`);
             const queenImage = document.getElementById(`queen-image${i}`);
             const queenImageBox = document.getElementById(`queen-image-box${i}`);
+            const queenDiv = document.getElementById(`queen${i}`);
             const placementAtWeek = queens.queens[i].placement[currentStatus.week-1];
 
             // Update dropdown to show current placement and hide dropdown if queen is no longer in the competition
@@ -205,6 +206,7 @@ const display = (function () {
             // Add class names to queen images so that formatting can be controlled through CSS
             queenImage.className = "queen-image " + placementAtWeek.toLowerCase().replaceAll(" ", "");
             queenImageBox.className = "queen-image-box " + placementAtWeek.toLowerCase().replaceAll(" ", "");
+            queenDiv.className = "queen-div " + placementAtWeek.toLowerCase().replaceAll(" ", "");
             if (currentStatus.week===competitionData.numberOfWeeks) {queenImageBox.className = queenImageBox.className + " finale"};
 
             // Add returning button if queen is out of the competition

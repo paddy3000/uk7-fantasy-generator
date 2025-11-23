@@ -9,10 +9,19 @@ const competitionData = {
     numberOfWeeks: 10,
     episodes: ["Queens of the Brit Gala", "Rumble in the Jumble", "Battle of the Brats", "Sweety Darlings!", "Talent Ahoy!", "Peter Pansy: The Rusical", "Snatch Me Out!", "The Hun Makeover", "Comedy is a Bitch", "Finale"],
     episodeType: ["Runway", "Design", "Girl Groups", "Acting", "Talent Show", "Rusical", "Snatch Game", "Makeover", "Roast", "Finale"],
-    lipSyncs: ["Shake It Off by Taylor Swift", "Le Freak (Freak Out) by Chic", "Tell It To My Heart by Taylor Dayne", "Got To Be Real by Cheryl Lynn", "Shut Up & Drive by Rihanna", "Cherry Bomb by Joan Jett and the Blackhearts", "Step It Up by RuPaul feat. Dave Audé", "If I Were Your Woman by Gladys Knight & The Pips"],
-    synopses: ["", "", "", "", "", "", "", "", "", ""] ,
+    lipSyncs: ["Von Dutch by Charli XCX", "Heartbreak (Make Me a Dancer) by Freemasons & Sophie Ellis-Bextor", "Sound of the Underground by Girls Aloud", "Pearls by Jessie Ware", "Spectrum (Say My Name) by Florence + the Machine & Calvin Harris", "Don't Rain on My Parade by Shirley Bassey", "Tainted Love by Soft Cell", "Push the Button by Sugababes", "Mamma Knows Best by Jessie J", "TBC"],
+    synopses: ["A hot new cast of queens enter the workroom as RuPaul kicks off his legendary race. Joel Dommett joins Michelle Visage and Alan Carr on the judging panel.", 
+               "Supermodel turned comedy star Michelle De Swarte joins Mama Ru, Michelle Visage and Graham Norton on the judging panel as the queens take on the iconic design challenge.", 
+               "The queens take on a hyperpop banger for the girl group challenge. Girls Aloud legend Nadine Coyle joins RuPaul, Michelle Visage and Graham Norton on the judging panel.", 
+               "There's high drama as the queens star in high camp bonk-buster fiction adaptations. Comedy legend Jane Horrocks guest judges alongside Ru, Michelle Visage and Alan Carr.", 
+               "The queens take to the high seas for a cruise themed talent show. Derry Girl Jamie-Lee O’Donnell joins RuPaul, Michelle Visage and Alan Carr on the judging panel.", 
+               "It's Rusical week! Mazz Murray joins Ru, Michelle, and Graham as one more queen takes her final bow.", 
+               "Jordan North joins RuPaul as the queens take on a new edition of the Snatch Game - Snatch Me Out!", 
+               "Mutya Buena joins the judging panel as the queens makeover over Hun-tastic celebrities.", 
+               "It's the semi-finals! BAFTA winner Sophie Willan joins RuPaul as the queens to show off their best stand-up skills in a roast challenge to secure a place in the finale.",
+            ""],
     runways: ["Queen of your Hometown", "Rumble in the Jumble", "Cuddly Wuddly", "Ab Fab: A Night of a Thousand Sweetie Darlings", "Having it Large", "Battle Axe - Warrior Queen", "Holiday Ho Ho Hos", "Drag Family Resemblance", "English Country Garden Realness", "Final Eleganza"],
-    competitiveEpisode: [true, true, true, true, true, true, true, false],
+    competitiveEpisode: [true, true, true, true, true, true, true, true, true, false],
     placements: ["Win", "High", "Safe", "Low", "Bottom", "Eliminated", "Out", "Quit"],
     finalePlacements: ["Winner", "Runner Up", "Eliminated", "Out"],
 };
@@ -36,7 +45,7 @@ const points = (function () {
 const queens = (function () {
     const queen0 = {
         queen: "Bones",
-        initialPlacement: ["Safe", "High", "Win", "Safe", "Bottom", "High", "Bottom", "Win", "Win", "Runner-up"],
+        initialPlacement: ["Safe", "High", "Win", "Safe", "Bottom", "High", "Bottom", "Win", "Win", "Runner Up"],
         initialReturn: Array(competitionData.numberOfWeeks).fill(false),
     };
 
@@ -48,7 +57,7 @@ const queens = (function () {
 
     const queen2 = {
         queen: "Catrin Feelings",
-        initialPlacement: ["High", "High", "Safe", "High", "Safe", "Safe", "High", "Bottom", "Bottom", "Runner-up"],
+        initialPlacement: ["High", "High", "Safe", "High", "Safe", "Safe", "High", "Bottom", "Bottom", "Runner Up"],
         initialReturn: Array(competitionData.numberOfWeeks).fill(false),
     };
 
@@ -60,7 +69,7 @@ const queens = (function () {
 
     const queen4 = {
         queen: "Elle Vosque",
-        initialPlacement: ["Win", "Safe", "High", "Safe", "High", "Win", "High", "Safe", "High", "Runner-up"],
+        initialPlacement: ["Win", "Safe", "High", "Safe", "High", "Win", "High", "Safe", "High", "Runner Up"],
         initialReturn: Array(competitionData.numberOfWeeks).fill(false),
     };
 
@@ -90,7 +99,7 @@ const queens = (function () {
 
     const queen9 = {
         queen: "Silllexa Diction",
-        initialPlacement: ["Safe", "Safe", "Safe", "Bottom", "Win", "Low", "Low", "High", "High", "Runner-up"],
+        initialPlacement: ["Safe", "Safe", "Safe", "Bottom", "Win", "Low", "Low", "High", "High", "Runner Up"],
         initialReturn: Array(competitionData.numberOfWeeks).fill(false),
     };
 
@@ -137,21 +146,21 @@ const images = {
 const storage = (function() {
     // Save data
     const saveData = function() {
-        localStorage.setItem("UK7queensData", JSON.stringify(queens.queens));  
-        localStorage.setItem("UK7currentStatus.week", JSON.stringify(currentStatus.week));  
+        localStorage.setItem("DRUK7Generator.queensData", JSON.stringify(queens.queens));  
+        localStorage.setItem("DRUK7Generator.currentStatus.week", JSON.stringify(currentStatus.week));  
         console.log(`storage.saveData: queens.queens array and currentStatus.week saved to local storage`);
     }
 
     const savePoints = function () {
-        localStorage.setItem("UK7points", JSON.stringify(points.points));
+        localStorage.setItem("DRUK7Generator.points", JSON.stringify(points.points));
         console.log(`storage.savePoints: points saved to local storage`);
     }
 
     // Read in queen data
     const getData = function() {
-        let storedQueens = JSON.parse(localStorage.getItem("UK7queensData"));   
-        let storedWeek = JSON.parse(localStorage.getItem("UK7currentStatus.week"));
-        let storedPoints = JSON.parse(localStorage.getItem("UK7points"));
+        let storedQueens = JSON.parse(localStorage.getItem("DRUK7Generator.queensData"));   
+        let storedWeek = JSON.parse(localStorage.getItem("DRUK7Generator.currentStatus.week"));
+        let storedPoints = JSON.parse(localStorage.getItem("DRUK7Generator.points"));
         
         if (storedQueens) {
             console.log(`storage.getData: queens.queens array retrieved from local storage`);
