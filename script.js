@@ -19,7 +19,7 @@ const competitionData = {
                "Jordan North joins RuPaul as the queens take on a new edition of the Snatch Game - Snatch Me Out!", 
                "Mutya Buena joins the judging panel as the queens makeover over Hun-tastic celebrities.", 
                "It's the semi-finals! BAFTA winner Sophie Willan joins RuPaul as the queens to show off their best stand-up skills in a roast challenge to secure a place in the finale.",
-            ""],
+               ""],
     runways: ["Queen of your Hometown", "Rumble in the Jumble", "Cuddly Wuddly", "Ab Fab: A Night of a Thousand Sweetie Darlings", "Having it Large", "Battle Axe - Warrior Queen", "Holiday Ho Ho Hos", "Drag Family Resemblance", "English Country Garden Realness", "Final Eleganza"],
     competitiveEpisode: [true, true, true, true, true, true, true, true, true, false],
     placements: ["Win", "High", "Safe", "Low", "Bottom", "Eliminated", "Out", "Quit"],
@@ -29,7 +29,7 @@ const competitionData = {
 // Number of points for each placement
 const points = (function () {
     const points =  [{id: "win",  placement: "Win", value: 5},
-                     {id: "top2", placement: "Top 2", value: 5},
+                     //{id: "top2", placement: "Top 2", value: 5},
                      {id: "high", placement: "High", value: 4},
                      {id: "safe", placement: "Safe", value: 3},
                      {id: "low",  placement: "Low", value: 2},
@@ -223,9 +223,8 @@ const universalDisplay = (function() {
             infoDiv.appendChild(paragraph);
         };
     
-        addParagraph("Welcome to the RuPaul's Drag Race All Stars 2 fantasy generator");
+        addParagraph("Welcome to the RuPaul's Drag Race UK Season 7 fantasy generator");
         addParagraph("Use the arrows to move through the weeks and reassign placements for the queens to change the outcome of the competition");
-        addParagraph(`Answer questions like "What if Adore had never quit?", "What if this season was non-elimination", and "What if Roxxxy had never leant Alaska that rhinestone tank top?"`);
         addParagraph(`To see the results summary press "See Results"`);
         addParagraph(`To reset the results back to the original placements from the competition press "Reset Results"`);
     
